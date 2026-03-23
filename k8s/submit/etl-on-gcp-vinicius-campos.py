@@ -13,7 +13,7 @@ from variables import (
 
 logging.basicConfig(format='%(name)s - %(asctime)s %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p', stream=sys.stdout)
-
+logger = logging.getLogger('ETL_GCP_VINICIUS_CAMPOS')
 logger.setLevel(logging.DEBUG)
 
 def read_json_and_write_parquet(spark, path_source: str, format_source: str, path_target: str, format_target: str):
